@@ -16,7 +16,7 @@ RUN bundle install
 
 COPY . $SITE_DIR
 
-CMD ["jekyll", "serve", "-H", "0.0.0.0", "-P", "4000", "--force_polling", "--livereload"]
+CMD ["jekyll", "serve", "-H", "0.0.0.0", "-P", "4000", "--force_polling", "--livereload", "-s", "./docs"]
 ENTRYPOINT ["./entrypoint"]
 
 EXPOSE 4000
